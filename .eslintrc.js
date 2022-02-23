@@ -18,7 +18,7 @@ module.exports = {
 		ecmaVersion: 2020,
 		sourceType: "module",
 	},
-	plugins: ["react", "jest", "jsx-a11y", "react-hooks", "sort-exports"],
+	plugins: ["react", "jest", "jsx-a11y", "prettier", "react-hooks", "sort-exports"],
 	rules: {
 		"global-require": "off",
 		indent: ["error", "tab"],
@@ -84,5 +84,20 @@ module.exports = {
 			"error",
 			{ sortDir: "asc", ignoreCase: true, sortExportKindFirst: "type" },
 		],
+		quotes: [
+      2,
+      'single',
+      {
+        avoidEscape: true,
+        allowTemplateLiterals: true,
+      },
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        useTabs: true,
+        printWidth: 100,
+      },
+    ],
 	},
 };
